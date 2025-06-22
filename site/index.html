@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Saudável - E-books</title>
+  
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f9f1;
+      overflow: hidden;
+    }
+    a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a h3 {
+  color: #2e7d32; /* manter a cor do título */
+}
+
+
+    #loading {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease-out forwards;
+      animation-delay: 3s;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    #broccoli {
+      width: 150px;
+      height: 150px;
+      animation: rotate 3s linear infinite;
+    }
+
+    #content {
+      display: none;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    #main-title {
+      font-size: 2.8em;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    #description {
+      font-size: 1.3em;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .slide-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .slide {
+      background-color: #ffffff;
+      border: 2px solid #c8e6c9;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .slide:hover {
+      transform: scale(1.05);
+    }
+
+    .slide h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading">
+    <img id="broccoli" src="Brocolis-Americano-Un-51.png" alt="Brocolis girando">
+  </div>
+
+  <div id="content">
+    <h1 id="main-title">Descubra o Poder do Bem-Estar</h1>
+    <p id="description">
+      Bem-vindo ao nosso universo de saúde e transformação! Aqui você encontra e-books práticos e inspiradores
+      que vão te ajudar a transformar corpo e mente com hábitos simples, receitas saudáveis e métodos eficazes. 🌿📚
+    </p>
+
+    <div class="slide-container">
+      <div class="slide" >
+        <a href="Dicas para emagrecer.html">
+        <h3>Dicas para Emagrecer com Sucesso</h3>
+        <p>Mude Sua Forma, Mude Sua Vida: Dicas para Emagrecer com Sucesso.</p></a>
+      </div>
+      <div class="slide" >
+        <a href="Métodos para uma Mente em Equilíbrio.html">
+        <h3>7 Métodos para uma Mente em Equilíbrio</h3>
+        <p>Fortaleça sua saúde mental com práticas simples e eficazes.</p></a>
+      </div>
+      <div class="slide" >
+        <a href="Metodos para ter uma alimentação saudavel.html">
+        <h3>7 métodos práticos e eficazes para ter uma alimentação saudável e equilibrada</h3>
+        <p>Saúde começa no prato: escolha alimentos que amem seu corpo!</p></a>
+      </div>
+      <div class="slide">
+        <a href="Métodos para Transformar Seu Corpo.html">
+        <h3>Transforme seu corpo, transforme sua vida!</h3>
+        <p>Desbloqueie seu potencial e transforme seu corpo em 10 passos simples e eficazes: comece a jornada para uma versão mais saudável e radiante de você mesmo!</p></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar o conteúdo após o carregamento
+    setTimeout(() => {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }, 3000);
+  </script>
+
+</body>
+</html>
